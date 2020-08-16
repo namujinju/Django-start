@@ -1,3 +1,12 @@
+# createsuperuser: 관리자 계정 생성
+# runserver: 서버 구동
+
+# migrate: 관리자 모드
+# makemigrations: 데이터베이스 변경사항 찾기
+# migrate: 데이터베이스 변경사항 반영
+# shell: 장고 shell 모드
+
+
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
@@ -6,7 +15,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'firstdjango.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tempPjt.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

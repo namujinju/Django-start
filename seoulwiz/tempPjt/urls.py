@@ -1,4 +1,7 @@
-"""firstdjango URL Configuration
+# 어떤 사용자가 요청이 들어오면 그 URL을 매핑하는 작업
+# 어떤 뷰로 찾아가라. 클라이언트와 뷰 중간의 브릿지 역할
+
+"""tempPjt URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -14,10 +17,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include # include 불러와야 함
-from first import views # first는 패키지 이름
+from django.urls import path, include
 
 urlpatterns = [
-    path("", include("first.urls")), # 웹앱 별로 다른 url 규칙을 적용하기 위해, 웹앱을 여러 개 만들어야 하기 때문에 관리를 용이하게
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
 ]
