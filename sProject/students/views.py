@@ -54,11 +54,11 @@ def modConStudent(request):
 
     s_qs = Student.objects.get(s_name=name)
 
-    s_qs.name = name
-    s_qs.major = major
-    s_qs.age = age
-    s_qs.grade = grade
-    s_qs.gender = gender
+    s_qs.s_name = name
+    s_qs.s_major = major
+    s_qs.s_age = age
+    s_qs.s_grade = grade
+    s_qs.s_gender = gender
 
     s_qs.save()
 
