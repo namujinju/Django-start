@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      http-equiv="content-Type"
+    />
+    <title>Modify User</title>
+  </head>
+  <body>
+    <h1>Modify User</h1>
+    <form action="{% url 'board:modUserCon' %}" method="post">
+      {% csrf_token %}
+      <div>
+        <label for="name">Name: {{user_info.u_name}}</label>
+        <input
+          type="hidden"
+          name="name"
+          id="name"
+          value="{{user_info.u_name}}"
+        />
+      </div>
+      <div>
+        <label for="nickname">Nickname: </label>
+        <input
+          type="text"
+          name="nickname"
+          id="nickname"
+          value="{{user_info.u_nickname}}"
+        />
+      </div>
+      <div>
+        <label for="age">Age: </label>
+        <input type="text" name="age" id="age" value="{{user_info.u_age}}" />
+      </div>
+      <input type="submit" name="signup" />
+    </form>
+  </body>
+</html>

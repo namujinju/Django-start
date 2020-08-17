@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      http-equiv="content-Type"
+    />
+    <title>User List</title>
+  </head>
+  <body>
+    <h1>User List</h1>
+    <div><a href="{% url 'board:signup' %}">Sign Up</a></div>
+
+    {% for user in user_list %}
+    <span>
+      <a href="{% url 'board:userDet' user.u_name %}">{{user.u_name}}</a>
+    </span>
+    <span>{{user.u_nickname}}</span>
+    <span>{{user.u_age}}</span>
+    <a href="{% url 'board:modUser' user.u_name %}">수정</a>
+    <a href="{% url 'board:delUser' user.u_name %}">삭제</a>
+    <br />
+    {% endfor %}
+
+    <form action="" method="post"></form>
+  </body>
+</html>

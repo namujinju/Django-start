@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      http-equiv="content-Type"
+    />
+    <title>Sign up!</title>
+  </head>
+  <body>
+    <h1>User Detail</h1>
+    {% if user_info %}
+    <span>name: {{user_info.u_name}}</span><br />
+    <span>nickname: {{user_info.u_nickname}}</span><br />
+    <span>age: {{user_info.u_age}}</span><br />
+    <span><a href="{% url 'board:modUser' user_info.u_name %}">수정</a></span>
+    {% endif %}
+  </body>
+</html>

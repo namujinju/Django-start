@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      http-equiv="content-Type"
+    />
+    <title>Sign up!</title>
+  </head>
+  <body>
+    <h1>Sign up!</h1>
+    <form action="{% url 'board:signCon' %}" method="post">
+      {% csrf_token %}
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="nickname">Nickname: </label>
+        <input type="text" name="nickname" id="nickname" />
+      </div>
+      <div>
+        <label for="age">Age: </label> <input type="text" name="age" id="age" />
+      </div>
+      <input type="submit" name="signup" />
+    </form>
+  </body>
+</html>
